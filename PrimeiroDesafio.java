@@ -38,20 +38,19 @@ public class PrimeiroDesafio {
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Informe um número para verificar: ");
-        int num = scanner.nextInt();
-
-        // Gera e imprime a sequência de Fibonacci até o número informado
-        printFibonacciSequence(num);
-
-        // Verifica se o número pertence à sequência de Fibonacci
-        if (isFibonacci(num)) {
-            System.out.println("O número " + num + " pertence à sequência de Fibonacci.");
-        } else {
-            System.out.println("O número " + num + " NÃO pertence à sequência de Fibonacci.");
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Informe um número para verificar: ");
+            int num = scanner.nextInt();
+            
+            // Gera e imprime a sequência de Fibonacci até o número informado
+            printFibonacciSequence(num);
+            
+            // Verifica se o número pertence à sequência de Fibonacci
+            if (isFibonacci(num)) {
+                System.out.println("O número " + num + " pertence à sequência de Fibonacci.");
+            } else {
+                System.out.println("O número " + num + " NÃO pertence à sequência de Fibonacci.");
+            }
         }
-
-        scanner.close();
     }
 }
