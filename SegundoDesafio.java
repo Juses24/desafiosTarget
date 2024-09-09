@@ -16,20 +16,19 @@ public class SegundoDesafio {
         }
 
         public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Informe uma string: ");
-            String inputString = scanner.nextLine();
-
-            // Conta o número de ocorrências da letra 'a' ou 'A'
-            int occurrences = countLetterA(inputString);
-
-            if (occurrences > 0) {
-                System.out.println("A letra 'a' aparece " + occurrences + " vezes na string.");
-            } else {
-                System.out.println("A letra 'a' não foi encontrada na string.");
+            try (Scanner scanner = new Scanner(System.in)) {
+                System.out.print("Informe uma string: ");
+                String inputString = scanner.nextLine();
+                
+                // Conta o número de ocorrências da letra 'a' ou 'A'
+                int occurrences = countLetterA(inputString);
+                
+                if (occurrences > 0) {
+                    System.out.println("A letra 'a' aparece " + occurrences + " vezes na string.");
+                } else {
+                    System.out.println("A letra 'a' não foi encontrada na string.");
+                }
             }
-
-            scanner.close();
         }
 
 
